@@ -4,22 +4,10 @@
 spring:
   profiles: local
 
-logging:
-  level:
-    root: info
-
 ---
 spring:
   profiles: dev
 
-logging:
-  level:
-    root: warning
-
 ---
 spring:
   profiles: prod
-
-logging:
-  level:
-    root: info

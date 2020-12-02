@@ -4,22 +4,25 @@
 spring:
   profiles: local
 
-logging:
-  level:
-    root: info
+api:
+  order:
+    port: 9200
+    url: http://localhost:${api.order.port}
 
 ---
 spring:
   profiles: dev
 
-logging:
-  level:
-    root: warning
+api:
+  order:
+    port: 9200
+    url: http://msa-dev-order:${api.order.port}
 
 ---
 spring:
   profiles: prod
 
-logging:
-  level:
-    root: info
+api:
+  order:
+    port: 9200
+    url: http://msa-prod-order:${api.order.port}
